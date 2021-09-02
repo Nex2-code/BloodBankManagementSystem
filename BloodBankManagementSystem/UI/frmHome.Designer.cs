@@ -1,7 +1,7 @@
 ﻿
 namespace BloodBankManagementSystem
 {
-    partial class Form1
+    partial class frmHome
     {
         /// <summary>
         ///  Required designer variable.
@@ -33,13 +33,13 @@ namespace BloodBankManagementSystem
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlfooter = new System.Windows.Forms.Panel();
-            this.lblfooter = new System.Windows.Forms.Label();
-            this.lbldev = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
+            this.lbldev = new System.Windows.Forms.Label();
+            this.lblfooter = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblOpve = new System.Windows.Forms.Label();
-            this.lblcount = new System.Windows.Forms.Label();
             this.lbldonorsOpve = new System.Windows.Forms.Label();
+            this.lblcount = new System.Windows.Forms.Label();
+            this.lblOpve = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@ namespace BloodBankManagementSystem
             this.donersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1233, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1245, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -103,6 +103,7 @@ namespace BloodBankManagementSystem
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
             this.userToolStripMenuItem.Text = "Users";
+            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
             // donersToolStripMenuItem
             // 
@@ -121,8 +122,30 @@ namespace BloodBankManagementSystem
             this.pnlfooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlfooter.Location = new System.Drawing.Point(0, 757);
             this.pnlfooter.Name = "pnlfooter";
-            this.pnlfooter.Size = new System.Drawing.Size(1233, 46);
+            this.pnlfooter.Size = new System.Drawing.Size(1245, 46);
             this.pnlfooter.TabIndex = 1;
+            // 
+            // lblname
+            // 
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblname.ForeColor = System.Drawing.Color.Green;
+            this.lblname.Location = new System.Drawing.Point(645, 6);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(135, 31);
+            this.lblname.TabIndex = 2;
+            this.lblname.Text = "Adarsh Negi";
+            // 
+            // lbldev
+            // 
+            this.lbldev.AutoSize = true;
+            this.lbldev.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lbldev.ForeColor = System.Drawing.Color.Black;
+            this.lbldev.Location = new System.Drawing.Point(477, 6);
+            this.lbldev.Name = "lbldev";
+            this.lbldev.Size = new System.Drawing.Size(162, 31);
+            this.lbldev.TabIndex = 1;
+            this.lbldev.Text = "Developed by:";
             // 
             // lblfooter
             // 
@@ -136,28 +159,6 @@ namespace BloodBankManagementSystem
             this.lblfooter.Text = "Blood Bank Management";
             this.lblfooter.Click += new System.EventHandler(this.lblfooter_Click);
             // 
-            // lbldev
-            // 
-            this.lbldev.AutoSize = true;
-            this.lbldev.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbldev.ForeColor = System.Drawing.Color.Black;
-            this.lbldev.Location = new System.Drawing.Point(477, 6);
-            this.lbldev.Name = "lbldev";
-            this.lbldev.Size = new System.Drawing.Size(162, 31);
-            this.lbldev.TabIndex = 1;
-            this.lbldev.Text = "Developed by:";
-            // 
-            // lblname
-            // 
-            this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lblname.ForeColor = System.Drawing.Color.Green;
-            this.lblname.Location = new System.Drawing.Point(645, 6);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(135, 31);
-            this.lblname.TabIndex = 2;
-            this.lblname.Text = "Adarsh Negi";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -169,16 +170,15 @@ namespace BloodBankManagementSystem
             this.panel1.Size = new System.Drawing.Size(250, 125);
             this.panel1.TabIndex = 2;
             // 
-            // lblOpve
+            // lbldonorsOpve
             // 
-            this.lblOpve.AutoSize = true;
-            this.lblOpve.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblOpve.ForeColor = System.Drawing.Color.Red;
-            this.lblOpve.Location = new System.Drawing.Point(16, 19);
-            this.lblOpve.Name = "lblOpve";
-            this.lblOpve.Size = new System.Drawing.Size(122, 81);
-            this.lblOpve.TabIndex = 0;
-            this.lblOpve.Text = "O+";
+            this.lbldonorsOpve.AutoSize = true;
+            this.lbldonorsOpve.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbldonorsOpve.Location = new System.Drawing.Point(156, 77);
+            this.lbldonorsOpve.Name = "lbldonorsOpve";
+            this.lbldonorsOpve.Size = new System.Drawing.Size(67, 23);
+            this.lbldonorsOpve.TabIndex = 2;
+            this.lbldonorsOpve.Text = "Donors";
             // 
             // lblcount
             // 
@@ -191,15 +191,16 @@ namespace BloodBankManagementSystem
             this.lblcount.TabIndex = 1;
             this.lblcount.Text = "100";
             // 
-            // lbldonorsOpve
+            // lblOpve
             // 
-            this.lbldonorsOpve.AutoSize = true;
-            this.lbldonorsOpve.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbldonorsOpve.Location = new System.Drawing.Point(156, 77);
-            this.lbldonorsOpve.Name = "lbldonorsOpve";
-            this.lbldonorsOpve.Size = new System.Drawing.Size(67, 23);
-            this.lbldonorsOpve.TabIndex = 2;
-            this.lbldonorsOpve.Text = "Donors";
+            this.lblOpve.AutoSize = true;
+            this.lblOpve.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblOpve.ForeColor = System.Drawing.Color.Red;
+            this.lblOpve.Location = new System.Drawing.Point(16, 19);
+            this.lblOpve.Name = "lblOpve";
+            this.lblOpve.Size = new System.Drawing.Size(122, 81);
+            this.lblOpve.TabIndex = 0;
+            this.lblOpve.Text = "O+";
             // 
             // panel2
             // 
@@ -521,20 +522,19 @@ namespace BloodBankManagementSystem
             // 
             // gdv
             // 
-            this.gdv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.gdv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdv.Location = new System.Drawing.Point(616, 128);
+            this.gdv.Location = new System.Drawing.Point(631, 129);
             this.gdv.Name = "gdv";
             this.gdv.RowHeadersWidth = 51;
             this.gdv.RowTemplate.Height = 29;
             this.gdv.Size = new System.Drawing.Size(581, 554);
             this.gdv.TabIndex = 12;
             // 
-            // Form1
+            // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1233, 803);
+            this.ClientSize = new System.Drawing.Size(1245, 803);
             this.Controls.Add(this.gdv);
             this.Controls.Add(this.tbsearch);
             this.Controls.Add(this.lblsearch);
@@ -549,7 +549,7 @@ namespace BloodBankManagementSystem
             this.Controls.Add(this.pnlfooter);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);

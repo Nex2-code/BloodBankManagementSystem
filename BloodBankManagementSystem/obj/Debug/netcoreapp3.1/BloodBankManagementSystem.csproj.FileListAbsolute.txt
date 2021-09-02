@@ -6,7 +6,6 @@ C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\De
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.dll
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.pdb
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.csproj.AssemblyReference.cache
-C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.Form1.resources
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.csproj.GenerateResource.cache
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.AssemblyInfoInputs.cache
@@ -15,3 +14,6 @@ C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\De
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.dll
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.pdb
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.genruntimeconfig.cache
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.frmHome.resources
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.Properties.Resources.resources
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.UI.frmUser.resources
