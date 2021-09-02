@@ -1,0 +1,17 @@
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.exe
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.dll.config
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.deps.json
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.runtimeconfig.json
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.runtimeconfig.dev.json
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\BloodBankManagementSystem.pdb
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.Form1.resources
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.csproj.GenerateResource.cache
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.AssemblyInfoInputs.cache
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.AssemblyInfo.cs
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.pdb
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.genruntimeconfig.cache
