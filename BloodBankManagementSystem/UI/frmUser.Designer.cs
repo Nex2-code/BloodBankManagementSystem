@@ -31,6 +31,7 @@ namespace BloodBankManagementSystem.UI
         {
             this.components = new System.ComponentModel.Container();
             this.pnltop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblmanage = new System.Windows.Forms.Label();
             this.pbox = new System.Windows.Forms.PictureBox();
             this.btnimage = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@ namespace BloodBankManagementSystem.UI
             this.btndelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.pnltop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +67,25 @@ namespace BloodBankManagementSystem.UI
             // pnltop
             // 
             this.pnltop.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnltop.Controls.Add(this.pictureBox1);
             this.pnltop.Controls.Add(this.lblmanage);
             this.pnltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnltop.Location = new System.Drawing.Point(0, 0);
             this.pnltop.Name = "pnltop";
             this.pnltop.Size = new System.Drawing.Size(1163, 54);
             this.pnltop.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pictureBox1.Image = global::BloodBankManagementSystem.Properties.Resources.icons8_close_window_96;
+            this.pictureBox1.Location = new System.Drawing.Point(1126, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblmanage
             // 
@@ -340,12 +355,14 @@ namespace BloodBankManagementSystem.UI
             this.Controls.Add(this.btnimage);
             this.Controls.Add(this.pbox);
             this.Controls.Add(this.pnltop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.Load += new System.EventHandler(this.frmUser_Load);
             this.pnltop.ResumeLayout(false);
             this.pnltop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).EndInit();
             this.ResumeLayout(false);
@@ -382,5 +399,6 @@ namespace BloodBankManagementSystem.UI
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

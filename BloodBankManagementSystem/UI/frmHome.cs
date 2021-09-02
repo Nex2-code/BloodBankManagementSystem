@@ -33,5 +33,10 @@ namespace BloodBankManagementSystem
             frmUser User = new frmUser();
             User.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
