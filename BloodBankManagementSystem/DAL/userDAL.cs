@@ -88,7 +88,7 @@ namespace BloodBankManagementSystem.DAL
             SqlConnection conn = new SqlConnection();
             try
             {
-                string sql = "UPDATE tbl_users SET usename=@username,email=@email,password=@password,full_name=@full_name,contact=@contact,address=@address,added_date=@added_date,image_name=@image_name";
+                string sql = "UPDATE tbl_users SET usename=@username,email=@email,password=@password,full_name=@full_name,contact=@contact,address=@address,added_date=@added_date,image_name=@image_name WHERE user_id=@user_id";
                 SqlCommand cmd = new SqlCommand(sql,conn);
                 cmd.Parameters.AddWithValue("username", u.username);
                 cmd.Parameters.AddWithValue("@email", u.email);
@@ -98,6 +98,7 @@ namespace BloodBankManagementSystem.DAL
                 cmd.Parameters.AddWithValue("@address", u.address);
                 cmd.Parameters.AddWithValue("@added_date", u.added_date);
                 cmd.Parameters.AddWithValue("@image_name", u.image_name);
+                cmd.Parameters.AddWithValue("@user_id", u.user_id);
                 conn.Open();
                 int row = cmd.ExecuteNonQuery();
                 if(row>0)
@@ -113,14 +114,45 @@ namespace BloodBankManagementSystem.DAL
             {
                 MessageBox.Show(ex.Message);
             }
-            else
+            finally
             {
                 conn.Close();
             }
 
             return isSuccess;
         }
+        #endregion
+        #region Delete data 
+        public bool Delete(userBLL u)
+        {
+            bool isSuccess = false;
+            SqlConnection conn = new SqlConnection();
+            try
+            {
+                string sql = "DELETE FROM tbl_users WHERE user_id=@user_id";
+                SqlCommand cmd = new SqlCommand(sql,conn);
+                cmd.Parameters.AddWithValue("user_id", u.user_id);
+                int row = cmd.ExecuteNonQuery();
+                if(row>0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
 
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isSuccess;
+        }
         #endregion
     }
 }
