@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -18,8 +19,10 @@ namespace BloodBankManagementSystem.UI
         }
         userBLL u = new userBLL();
         userDAL dal = new userDAL();
-        string imageName = "no-image.jpg";
-
+        string imageName = "no-image.png";
+        string rowheaderimage;
+        string sourcePath = "";
+        string destinationpath = "";
         private void frmUser_Load(object sender, EventArgs e)
         {
             DataTable dt = dal.Select();
@@ -46,6 +49,11 @@ namespace BloodBankManagementSystem.UI
             u.address = txtboxadress.Text;
             u.added_date = DateTime.Now;
             u.image_name = imageName;
+
+            if(imageName != "no-image.png")
+            {
+                File.Copy(sourcePath, destinationpath);
+            }
             bool success = dal.Insert(u);
             if(success == true)
             {
@@ -68,6 +76,9 @@ namespace BloodBankManagementSystem.UI
             txtboxcontact.Text = "";
             txtboxadress.Text = "";
             txtboxid.Text = "";
+            string path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 25);
+            string imagepath = path + "\\images\\no-image.png";
+            pbox.Image = new Bitmap(imagepath);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -81,8 +92,27 @@ namespace BloodBankManagementSystem.UI
             u.address = txtboxadress.Text;
             u.added_date = DateTime.Now;
             u.image_name = imageName;
+
+            if (imageName != "no-image.png")
+            {
+                File.Copy(sourcePath, destinationpath);
+            }
+
             bool success = dal.Update(u);
-            if(success == true)
+            if (rowheaderimage != "no-image.png")
+            {
+                string path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 25);
+                string imagepath = path + "\\images\\" + rowheaderimage;
+
+                clear();
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+                File.Delete(imagepath);
+            }
+
+
+            if (success == true)
             {
                 MessageBox.Show("Successfully Updated");
                 DataTable dt = dal.Select();
@@ -106,6 +136,22 @@ namespace BloodBankManagementSystem.UI
             txtboxfullname.Text = dgvuser.Rows[RowIndex].Cells[4].Value.ToString();        
             txtboxcontact.Text = dgvuser.Rows[RowIndex].Cells[5].Value.ToString();
             txtboxadress.Text = dgvuser.Rows[RowIndex].Cells[6].Value.ToString();
+            imageName = dgvuser.Rows[RowIndex].Cells[8].Value.ToString();
+
+            rowheaderimage = imageName;
+
+
+            string path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 25);
+            if(imageName != "no-image.jpg")
+            {
+                string imagepath = path + "\\images\\" + imageName;
+                pbox.Image = new Bitmap(imagepath);
+            }
+            else
+            {
+                string imagepath = path + "\\images\\no-image.png";
+                pbox.Image = new Bitmap(imagepath);
+            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -116,6 +162,18 @@ namespace BloodBankManagementSystem.UI
         private void btndelete_Click(object sender, EventArgs e)
         {
             u.user_id = int.Parse(txtboxid.Text); 
+            if(rowheaderimage != "no-image.png")
+            {
+                string path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 25);
+                string imagepath = path + "\\images\\" + rowheaderimage;
+
+                clear();
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                
+                File.Delete(imagepath);
+            }
+
             bool success = dal.Delete(u);
             if(success == true)
             {
@@ -126,6 +184,41 @@ namespace BloodBankManagementSystem.UI
             else
             {
                 MessageBox.Show("Fail to Update");
+            }
+        }
+
+        private void btnimage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image File (*.jpg;*.jpeg;,*.png)|*.jpg;*.jpeg;,*.png;";
+            if(open.ShowDialog()==DialogResult.OK)
+            {
+                if(open.CheckFileExists)
+                {
+                    pbox.Image = new Bitmap(open.FileName);
+                    string ext = Path.GetExtension(open.FileName);
+                    Random ran = new Random();
+                    int RandInt = ran.Next(0, 1000);
+                    imageName = "Blood_management_user_" + RandInt + ext;
+                    sourcePath = open.FileName;
+                    string path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 25);
+                    destinationpath = path + "\\images\\" + imageName;                       
+                }
+            }
+        }
+
+        private void tbsearch_TextChanged(object sender, EventArgs e)
+        {
+            string keywords = tbusersearch.Text;
+            if(keywords != null)
+            {
+                DataTable dt = dal.Search(keywords);
+                dgvuser.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = dal.Select();
+                dgvuser.DataSource = dt;
             }
         }
     }

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace BloodBankManagementSystem.DAL
 {
-    class userDAL
+    class donorDAL
     {
         static string myconn = ConfigurationManager.ConnectionStrings["connstr"].ConnectionString;
 
@@ -21,13 +21,13 @@ namespace BloodBankManagementSystem.DAL
 
             try
             {
-                string sql = "SELECT * FROM tbl_users";
+                string sql = "SELECT * FROM tbl_donors";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
                 adapter.Fill(dt);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -40,26 +40,28 @@ namespace BloodBankManagementSystem.DAL
         }
         #endregion
         #region insert data base into user
-        public bool Insert(userBLL u)
+        public bool Insert(donorBLL d)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconn);
             try
             {
-                string sql = "INSERT INTO tbl_users(username,email,password,full_name,contact,address,added_date,image_name) values (@username,@email,@password,@full_name,@contact,@address,@added_date,@image_name)";
-                SqlCommand cmd = new SqlCommand(sql,conn);
-                cmd.Parameters.AddWithValue("@username", u.username);
-                cmd.Parameters.AddWithValue("@email", u.email);
-                cmd.Parameters.AddWithValue("@password", u.password);
-                cmd.Parameters.AddWithValue("@full_name", u.full_name);
-                cmd.Parameters.AddWithValue("@contact", u.contact);
-                cmd.Parameters.AddWithValue("@address", u.address);
-                cmd.Parameters.AddWithValue("@added_date", u.added_date);
-                cmd.Parameters.AddWithValue("@image_name",u.image_name);
+                string sql = "INSERT INTO tbl_donors(first_name,email,gender,last_name,blood_group,contact,address,added_date,image_name,added_by) values (@first_name,@email,@gender,@last_name,@blood_group,@contact,@address,@added_date,@image_name,@added_by)";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@first_name", d.first_name);
+                cmd.Parameters.AddWithValue("@email", d.email);
+                cmd.Parameters.AddWithValue("@last_name", d.last_name);
+                cmd.Parameters.AddWithValue("@gender", d.gender);
+                cmd.Parameters.AddWithValue("@contact", d.contact);
+                cmd.Parameters.AddWithValue("@address", d.address);
+                cmd.Parameters.AddWithValue("@added_date", d.added_date);
+                cmd.Parameters.AddWithValue("@image_name", d.image_name);
+                cmd.Parameters.AddWithValue("@blood_group", d.blood_group);
+                cmd.Parameters.AddWithValue("@added_by", d.added_by);
                 conn.Open();
 
                 int row = cmd.ExecuteNonQuery();
-                if(row>0)
+                if (row > 0)
                 {
                     isSuccess = true;
                 }
@@ -67,8 +69,8 @@ namespace BloodBankManagementSystem.DAL
                 {
                     isSuccess = false;
                 }
-             }
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -82,26 +84,28 @@ namespace BloodBankManagementSystem.DAL
         }
         #endregion
         #region update data base
-        public bool Update(userBLL u)
+        public bool Update(donorBLL d)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconn);
             try
             {
-                string sql = "UPDATE tbl_users SET username=@username,email=@email,password=@password,full_name=@full_name,contact=@contact,address=@address,added_date=@added_date,image_name=@image_name WHERE user_id=@user_id";
-                SqlCommand cmd = new SqlCommand(sql,conn);
-                cmd.Parameters.AddWithValue("@username", u.username);
-                cmd.Parameters.AddWithValue("@email", u.email);
-                cmd.Parameters.AddWithValue("@password", u.password);
-                cmd.Parameters.AddWithValue("@full_name", u.full_name);
-                cmd.Parameters.AddWithValue("@contact", u.contact);
-                cmd.Parameters.AddWithValue("@address", u.address);
-                cmd.Parameters.AddWithValue("@added_date", u.added_date);
-                cmd.Parameters.AddWithValue("@image_name", u.image_name);
-                cmd.Parameters.AddWithValue("@user_id", u.user_id);
+                string sql = "UPDATE tbl_donors SET first_name=@first_name,email=@email,last_name=@last_name,blood_group=@blood_group,gender=@gender,contact=@contact,address=@address,added_date=@added_date,image_name=@image_name,added_by=@added_by WHERE donor_id=@donor_id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@first_name", d.first_name);
+                cmd.Parameters.AddWithValue("@last_name", d.last_name);
+                cmd.Parameters.AddWithValue("@email", d.email);
+                cmd.Parameters.AddWithValue("@gender", d.gender);
+                cmd.Parameters.AddWithValue("@contact", d.contact);
+                cmd.Parameters.AddWithValue("@address", d.address);
+                cmd.Parameters.AddWithValue("@added_date", d.added_date);
+                cmd.Parameters.AddWithValue("@image_name", d.image_name);
+                cmd.Parameters.AddWithValue("@blood_group", d.blood_group);
+                cmd.Parameters.AddWithValue("@added_by", d.added_by);
+                cmd.Parameters.AddWithValue("@donor_id", d.donor_id);
                 conn.Open();
                 int row = cmd.ExecuteNonQuery();
-                if(row>0)
+                if (row > 0)
                 {
                     isSuccess = true;
                 }
@@ -110,7 +114,7 @@ namespace BloodBankManagementSystem.DAL
                     isSuccess = false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -123,18 +127,18 @@ namespace BloodBankManagementSystem.DAL
         }
         #endregion
         #region Delete data 
-        public bool Delete(userBLL u)
+        public bool Delete( donorBLL d)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconn);
             try
             {
-                string sql = "DELETE FROM tbl_users WHERE user_id=@user_id";
-                SqlCommand cmd = new SqlCommand(sql,conn);
-                cmd.Parameters.AddWithValue("user_id", u.user_id);
+                string sql = "DELETE FROM tbl_donors WHERE donor_id=@donor_id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("donor_id", d.donor_id);
                 conn.Open();
                 int row = cmd.ExecuteNonQuery();
-                if(row>0)
+                if (row > 0)
                 {
                     isSuccess = true;
                 }
@@ -144,7 +148,7 @@ namespace BloodBankManagementSystem.DAL
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -162,14 +166,14 @@ namespace BloodBankManagementSystem.DAL
             DataTable dt = new DataTable();
             try
             {
-                string sql = "SELECT * FROM tbl_users WHERE user_id LIKE '%" + keywords + "%' OR full_name LIKE '%" + keywords + "%' OR username LIKE '%" + keywords + "%'";
-                SqlCommand cmd = new SqlCommand(sql,conn);
+                string sql = "SELECT * FROM tbl_donors WHERE donor_id LIKE '%" + keywords + "%' OR first_name LIKE '%" + keywords + "%' OR blood_group LIKE '%" + keywords + "%'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
                 adapter.Fill(dt);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -180,25 +184,19 @@ namespace BloodBankManagementSystem.DAL
             return dt;
         }
         #endregion
-        
-        
-        #region
-        public userBLL GetIDFromUsername(string username)
+        #region donor count
+        public string donorcount(string blood_group)
         {
-            userBLL u = new userBLL();
             SqlConnection conn = new SqlConnection(myconn);
-            DataTable dt = new DataTable();
+            string donor = "0";
             try
             {
-                string sql = "SELECT user_id FROM tbl_users WHERE username='" + username + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
+                string sql = "SELECT * FROM tbl_donors WHERE blood_group = '" + blood_group + "'";
+                SqlCommand cmd = new SqlCommand(sql,conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                conn.Open();
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                if(dt.Rows.Count>0)
-                {
-                    u.user_id = int.Parse(dt.Rows[0]["user_id"].ToString());
-                }
+                donor = dt.Rows.Count.ToString();
             }
             catch(Exception ex)
             {
@@ -208,8 +206,8 @@ namespace BloodBankManagementSystem.DAL
             {
                 conn.Close();
             }
+            return donor;
 
-            return u;
         }
         #endregion
     }

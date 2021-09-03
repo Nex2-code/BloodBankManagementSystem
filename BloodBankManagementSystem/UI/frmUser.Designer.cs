@@ -51,7 +51,7 @@ namespace BloodBankManagementSystem.UI
             this.txtboxadress = new System.Windows.Forms.TextBox();
             this.lblprofilepic = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tbsearch = new System.Windows.Forms.TextBox();
+            this.tbusersearch = new System.Windows.Forms.TextBox();
             this.lblsearch = new System.Windows.Forms.Label();
             this.dgvuser = new System.Windows.Forms.DataGridView();
             this.btnadd = new System.Windows.Forms.Button();
@@ -115,6 +115,7 @@ namespace BloodBankManagementSystem.UI
             this.btnimage.TabIndex = 2;
             this.btnimage.Text = "Select Image";
             this.btnimage.UseVisualStyleBackColor = true;
+            this.btnimage.Click += new System.EventHandler(this.btnimage_Click);
             // 
             // txtboxfullname
             // 
@@ -255,12 +256,13 @@ namespace BloodBankManagementSystem.UI
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // tbsearch
+            // tbusersearch
             // 
-            this.tbsearch.Location = new System.Drawing.Point(650, 111);
-            this.tbsearch.Name = "tbsearch";
-            this.tbsearch.Size = new System.Drawing.Size(491, 27);
-            this.tbsearch.TabIndex = 20;
+            this.tbusersearch.Location = new System.Drawing.Point(650, 111);
+            this.tbusersearch.Name = "tbusersearch";
+            this.tbusersearch.Size = new System.Drawing.Size(491, 27);
+            this.tbusersearch.TabIndex = 20;
+            this.tbusersearch.TextChanged += new System.EventHandler(this.tbsearch_TextChanged);
             // 
             // lblsearch
             // 
@@ -341,7 +343,7 @@ namespace BloodBankManagementSystem.UI
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.dgvuser);
-            this.Controls.Add(this.tbsearch);
+            this.Controls.Add(this.tbusersearch);
             this.Controls.Add(this.lblsearch);
             this.Controls.Add(this.lblprofilepic);
             this.Controls.Add(this.lbladdress);
@@ -398,7 +400,7 @@ namespace BloodBankManagementSystem.UI
         private System.Windows.Forms.TextBox txtboxadress;
         private System.Windows.Forms.Label lblprofilepic;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox tbsearch;
+        private System.Windows.Forms.TextBox tbusersearch;
         private System.Windows.Forms.Label lblsearch;
         private System.Windows.Forms.DataGridView dgvuser;
         private System.Windows.Forms.Button btnadd;

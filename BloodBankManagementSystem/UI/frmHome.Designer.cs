@@ -38,40 +38,42 @@ namespace BloodBankManagementSystem
             this.lblfooter = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbldonorsOpve = new System.Windows.Forms.Label();
-            this.lblcount = new System.Windows.Forms.Label();
+            this.lblcountOpve = new System.Windows.Forms.Label();
             this.lblOpve = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblcountOnve = new System.Windows.Forms.Label();
             this.lblOnve = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblcountAnve = new System.Windows.Forms.Label();
             this.lblAnve = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblcountApve = new System.Windows.Forms.Label();
             this.lblApve = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblcountBnve = new System.Windows.Forms.Label();
             this.lblBnve = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblcountBpve = new System.Windows.Forms.Label();
             this.lblBpve = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblcountABnve = new System.Windows.Forms.Label();
             this.lblABnve = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblcountABpve = new System.Windows.Forms.Label();
             this.lblABpve = new System.Windows.Forms.Label();
             this.lblsearch = new System.Windows.Forms.Label();
             this.tbsearch = new System.Windows.Forms.TextBox();
             this.gdv = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbluserlog = new System.Windows.Forms.Label();
+            this.labuserlogname = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlfooter.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,6 +117,7 @@ namespace BloodBankManagementSystem
             this.donersToolStripMenuItem.Name = "donersToolStripMenuItem";
             this.donersToolStripMenuItem.Size = new System.Drawing.Size(86, 29);
             this.donersToolStripMenuItem.Text = "Doners";
+            this.donersToolStripMenuItem.Click += new System.EventHandler(this.donersToolStripMenuItem_Click);
             // 
             // pnlfooter
             // 
@@ -166,7 +169,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.lbldonorsOpve);
-            this.panel1.Controls.Add(this.lblcount);
+            this.panel1.Controls.Add(this.lblcountOpve);
             this.panel1.Controls.Add(this.lblOpve);
             this.panel1.Location = new System.Drawing.Point(27, 67);
             this.panel1.Name = "panel1";
@@ -183,16 +186,16 @@ namespace BloodBankManagementSystem
             this.lbldonorsOpve.TabIndex = 2;
             this.lbldonorsOpve.Text = "Donors";
             // 
-            // lblcount
+            // lblcountOpve
             // 
-            this.lblcount.AutoSize = true;
-            this.lblcount.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblcount.ForeColor = System.Drawing.Color.Green;
-            this.lblcount.Location = new System.Drawing.Point(144, 19);
-            this.lblcount.Name = "lblcount";
-            this.lblcount.Size = new System.Drawing.Size(82, 50);
-            this.lblcount.TabIndex = 1;
-            this.lblcount.Text = "100";
+            this.lblcountOpve.AutoSize = true;
+            this.lblcountOpve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountOpve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountOpve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountOpve.Name = "lblcountOpve";
+            this.lblcountOpve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountOpve.TabIndex = 1;
+            this.lblcountOpve.Text = "100";
             // 
             // lblOpve
             // 
@@ -209,7 +212,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblcountOnve);
             this.panel2.Controls.Add(this.lblOnve);
             this.panel2.Location = new System.Drawing.Point(307, 67);
             this.panel2.Name = "panel2";
@@ -226,16 +229,16 @@ namespace BloodBankManagementSystem
             this.label1.TabIndex = 2;
             this.label1.Text = "Donors";
             // 
-            // label2
+            // lblcountOnve
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Green;
-            this.label2.Location = new System.Drawing.Point(144, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 50);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "100";
+            this.lblcountOnve.AutoSize = true;
+            this.lblcountOnve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountOnve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountOnve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountOnve.Name = "lblcountOnve";
+            this.lblcountOnve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountOnve.TabIndex = 1;
+            this.lblcountOnve.Text = "100";
             // 
             // lblOnve
             // 
@@ -252,7 +255,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblcountAnve);
             this.panel3.Controls.Add(this.lblAnve);
             this.panel3.Location = new System.Drawing.Point(307, 221);
             this.panel3.Name = "panel3";
@@ -269,16 +272,16 @@ namespace BloodBankManagementSystem
             this.label4.TabIndex = 2;
             this.label4.Text = "Donors";
             // 
-            // label5
+            // lblcountAnve
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Green;
-            this.label5.Location = new System.Drawing.Point(144, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 50);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "100";
+            this.lblcountAnve.AutoSize = true;
+            this.lblcountAnve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountAnve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountAnve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountAnve.Name = "lblcountAnve";
+            this.lblcountAnve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountAnve.TabIndex = 1;
+            this.lblcountAnve.Text = "100";
             // 
             // lblAnve
             // 
@@ -295,7 +298,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.lblcountApve);
             this.panel4.Controls.Add(this.lblApve);
             this.panel4.Location = new System.Drawing.Point(27, 221);
             this.panel4.Name = "panel4";
@@ -312,16 +315,16 @@ namespace BloodBankManagementSystem
             this.label7.TabIndex = 2;
             this.label7.Text = "Donors";
             // 
-            // label8
+            // lblcountApve
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.Green;
-            this.label8.Location = new System.Drawing.Point(144, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 50);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "100";
+            this.lblcountApve.AutoSize = true;
+            this.lblcountApve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountApve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountApve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountApve.Name = "lblcountApve";
+            this.lblcountApve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountApve.TabIndex = 1;
+            this.lblcountApve.Text = "100";
             // 
             // lblApve
             // 
@@ -338,7 +341,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.lblcountBnve);
             this.panel5.Controls.Add(this.lblBnve);
             this.panel5.Location = new System.Drawing.Point(307, 379);
             this.panel5.Name = "panel5";
@@ -355,16 +358,16 @@ namespace BloodBankManagementSystem
             this.label10.TabIndex = 2;
             this.label10.Text = "Donors";
             // 
-            // label11
+            // lblcountBnve
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.Green;
-            this.label11.Location = new System.Drawing.Point(144, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 50);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "100";
+            this.lblcountBnve.AutoSize = true;
+            this.lblcountBnve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountBnve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountBnve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountBnve.Name = "lblcountBnve";
+            this.lblcountBnve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountBnve.TabIndex = 1;
+            this.lblcountBnve.Text = "100";
             // 
             // lblBnve
             // 
@@ -381,7 +384,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel6.Controls.Add(this.label13);
-            this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.lblcountBpve);
             this.panel6.Controls.Add(this.lblBpve);
             this.panel6.Location = new System.Drawing.Point(27, 379);
             this.panel6.Name = "panel6";
@@ -398,16 +401,16 @@ namespace BloodBankManagementSystem
             this.label13.TabIndex = 2;
             this.label13.Text = "Donors";
             // 
-            // label14
+            // lblcountBpve
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Green;
-            this.label14.Location = new System.Drawing.Point(144, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 50);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "100";
+            this.lblcountBpve.AutoSize = true;
+            this.lblcountBpve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountBpve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountBpve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountBpve.Name = "lblcountBpve";
+            this.lblcountBpve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountBpve.TabIndex = 1;
+            this.lblcountBpve.Text = "100";
             // 
             // lblBpve
             // 
@@ -424,7 +427,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.lblcountABnve);
             this.panel7.Controls.Add(this.lblABnve);
             this.panel7.Location = new System.Drawing.Point(307, 547);
             this.panel7.Name = "panel7";
@@ -441,16 +444,16 @@ namespace BloodBankManagementSystem
             this.label16.TabIndex = 2;
             this.label16.Text = "Donors";
             // 
-            // label17
+            // lblcountABnve
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.Green;
-            this.label17.Location = new System.Drawing.Point(144, 19);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(82, 50);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "100";
+            this.lblcountABnve.AutoSize = true;
+            this.lblcountABnve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountABnve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountABnve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountABnve.Name = "lblcountABnve";
+            this.lblcountABnve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountABnve.TabIndex = 1;
+            this.lblcountABnve.Text = "100";
             // 
             // lblABnve
             // 
@@ -467,7 +470,7 @@ namespace BloodBankManagementSystem
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel8.Controls.Add(this.label19);
-            this.panel8.Controls.Add(this.label20);
+            this.panel8.Controls.Add(this.lblcountABpve);
             this.panel8.Controls.Add(this.lblABpve);
             this.panel8.Location = new System.Drawing.Point(27, 547);
             this.panel8.Name = "panel8";
@@ -484,16 +487,16 @@ namespace BloodBankManagementSystem
             this.label19.TabIndex = 2;
             this.label19.Text = "Donors";
             // 
-            // label20
+            // lblcountABpve
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.Green;
-            this.label20.Location = new System.Drawing.Point(144, 19);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 50);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "100";
+            this.lblcountABpve.AutoSize = true;
+            this.lblcountABpve.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcountABpve.ForeColor = System.Drawing.Color.Green;
+            this.lblcountABpve.Location = new System.Drawing.Point(144, 19);
+            this.lblcountABpve.Name = "lblcountABpve";
+            this.lblcountABpve.Size = new System.Drawing.Size(82, 50);
+            this.lblcountABpve.TabIndex = 1;
+            this.lblcountABpve.Text = "100";
             // 
             // lblABpve
             // 
@@ -522,6 +525,7 @@ namespace BloodBankManagementSystem
             this.tbsearch.Name = "tbsearch";
             this.tbsearch.Size = new System.Drawing.Size(491, 27);
             this.tbsearch.TabIndex = 11;
+            this.tbsearch.TextChanged += new System.EventHandler(this.tbsearch_TextChanged);
             // 
             // gdv
             // 
@@ -545,11 +549,33 @@ namespace BloodBankManagementSystem
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lbluserlog
+            // 
+            this.lbluserlog.AutoSize = true;
+            this.lbluserlog.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbluserlog.Location = new System.Drawing.Point(207, 37);
+            this.lbluserlog.Name = "lbluserlog";
+            this.lbluserlog.Size = new System.Drawing.Size(49, 20);
+            this.lbluserlog.TabIndex = 14;
+            this.lbluserlog.Text = "User :";
+            // 
+            // labuserlogname
+            // 
+            this.labuserlogname.AutoSize = true;
+            this.labuserlogname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labuserlogname.Location = new System.Drawing.Point(262, 37);
+            this.labuserlogname.Name = "labuserlogname";
+            this.labuserlogname.Size = new System.Drawing.Size(13, 20);
+            this.labuserlogname.TabIndex = 15;
+            this.labuserlogname.Text = ".";
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 803);
+            this.Controls.Add(this.labuserlogname);
+            this.Controls.Add(this.lbluserlog);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gdv);
             this.Controls.Add(this.tbsearch);
@@ -569,6 +595,7 @@ namespace BloodBankManagementSystem
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Activated += new System.EventHandler(this.frmHome_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -608,40 +635,42 @@ namespace BloodBankManagementSystem
         private System.Windows.Forms.Label lblfooter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbldonorsOpve;
-        private System.Windows.Forms.Label lblcount;
+        private System.Windows.Forms.Label lblcountOpve;
         private System.Windows.Forms.Label lblOpve;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblcountOnve;
         private System.Windows.Forms.Label lblOnve;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblcountAnve;
         private System.Windows.Forms.Label lblAnve;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblcountApve;
         private System.Windows.Forms.Label lblApve;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblcountBnve;
         private System.Windows.Forms.Label lblBnve;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblcountBpve;
         private System.Windows.Forms.Label lblBpve;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblcountABnve;
         private System.Windows.Forms.Label lblABnve;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblcountABpve;
         private System.Windows.Forms.Label lblABpve;
         private System.Windows.Forms.Label lblsearch;
         private System.Windows.Forms.TextBox tbsearch;
         private System.Windows.Forms.DataGridView gdv;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbluserlog;
+        private System.Windows.Forms.Label labuserlogname;
     }
 }
 
