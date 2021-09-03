@@ -35,10 +35,10 @@ namespace BloodBankManagementSystem.UI
             this.lblmanage = new System.Windows.Forms.Label();
             this.pbox = new System.Windows.Forms.PictureBox();
             this.btnimage = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtboxfullname = new System.Windows.Forms.TextBox();
             this.lblfullname = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtboxid = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
             this.txtboxemail = new System.Windows.Forms.TextBox();
             this.lblusername = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@ namespace BloodBankManagementSystem.UI
             this.lblcontact = new System.Windows.Forms.Label();
             this.txtboxcontact = new System.Windows.Forms.TextBox();
             this.lbladdress = new System.Windows.Forms.Label();
-            this.txtadress = new System.Windows.Forms.TextBox();
+            this.txtboxadress = new System.Windows.Forms.TextBox();
             this.lblprofilepic = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tbsearch = new System.Windows.Forms.TextBox();
@@ -116,13 +116,13 @@ namespace BloodBankManagementSystem.UI
             this.btnimage.Text = "Select Image";
             this.btnimage.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtboxfullname
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 325);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(420, 27);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtboxfullname.Location = new System.Drawing.Point(130, 325);
+            this.txtboxfullname.Name = "txtboxfullname";
+            this.txtboxfullname.Size = new System.Drawing.Size(420, 27);
+            this.txtboxfullname.TabIndex = 3;
+            this.txtboxfullname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblfullname
             // 
@@ -144,13 +144,13 @@ namespace BloodBankManagementSystem.UI
             this.lblid.TabIndex = 6;
             this.lblid.Text = "ID";
             // 
-            // txtid
+            // txtboxid
             // 
-            this.txtid.Location = new System.Drawing.Point(130, 268);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(420, 27);
-            this.txtid.TabIndex = 5;
+            this.txtboxid.Location = new System.Drawing.Point(130, 268);
+            this.txtboxid.Name = "txtboxid";
+            this.txtboxid.ReadOnly = true;
+            this.txtboxid.Size = new System.Drawing.Size(420, 27);
+            this.txtboxid.TabIndex = 5;
             // 
             // lblemail
             // 
@@ -200,6 +200,7 @@ namespace BloodBankManagementSystem.UI
             // 
             this.txtpassword.Location = new System.Drawing.Point(130, 470);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = 'x';
             this.txtpassword.Size = new System.Drawing.Size(420, 27);
             this.txtpassword.TabIndex = 11;
             // 
@@ -230,13 +231,13 @@ namespace BloodBankManagementSystem.UI
             this.lbladdress.TabIndex = 16;
             this.lbladdress.Text = "Address";
             // 
-            // txtadress
+            // txtboxadress
             // 
-            this.txtadress.Location = new System.Drawing.Point(130, 574);
-            this.txtadress.Multiline = true;
-            this.txtadress.Name = "txtadress";
-            this.txtadress.Size = new System.Drawing.Size(420, 134);
-            this.txtadress.TabIndex = 15;
+            this.txtboxadress.Location = new System.Drawing.Point(130, 574);
+            this.txtboxadress.Multiline = true;
+            this.txtboxadress.Name = "txtboxadress";
+            this.txtboxadress.Size = new System.Drawing.Size(420, 134);
+            this.txtboxadress.TabIndex = 15;
             // 
             // lblprofilepic
             // 
@@ -280,6 +281,7 @@ namespace BloodBankManagementSystem.UI
             this.dgvuser.RowTemplate.Height = 29;
             this.dgvuser.Size = new System.Drawing.Size(566, 529);
             this.dgvuser.TabIndex = 21;
+            this.dgvuser.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvuser_RowHeaderMouseClick);
             // 
             // btnadd
             // 
@@ -291,6 +293,7 @@ namespace BloodBankManagementSystem.UI
             this.btnadd.TabIndex = 22;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnclear
             // 
@@ -302,6 +305,7 @@ namespace BloodBankManagementSystem.UI
             this.btnclear.TabIndex = 23;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btndelete
             // 
@@ -313,6 +317,7 @@ namespace BloodBankManagementSystem.UI
             this.btndelete.TabIndex = 24;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnUpdate
             // 
@@ -324,6 +329,7 @@ namespace BloodBankManagementSystem.UI
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmUser
             // 
@@ -339,7 +345,7 @@ namespace BloodBankManagementSystem.UI
             this.Controls.Add(this.lblsearch);
             this.Controls.Add(this.lblprofilepic);
             this.Controls.Add(this.lbladdress);
-            this.Controls.Add(this.txtadress);
+            this.Controls.Add(this.txtboxadress);
             this.Controls.Add(this.lblcontact);
             this.Controls.Add(this.txtboxcontact);
             this.Controls.Add(this.lblpassword);
@@ -349,9 +355,9 @@ namespace BloodBankManagementSystem.UI
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.txtboxemail);
             this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtboxid);
             this.Controls.Add(this.lblfullname);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtboxfullname);
             this.Controls.Add(this.btnimage);
             this.Controls.Add(this.pbox);
             this.Controls.Add(this.pnltop);
@@ -376,10 +382,10 @@ namespace BloodBankManagementSystem.UI
         private System.Windows.Forms.Label lblmanage;
         private System.Windows.Forms.PictureBox pbox;
         private System.Windows.Forms.Button btnimage;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxfullname;
         private System.Windows.Forms.Label lblfullname;
         private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.TextBox txtboxid;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.TextBox txtboxemail;
         private System.Windows.Forms.Label lblusername;
@@ -389,7 +395,7 @@ namespace BloodBankManagementSystem.UI
         private System.Windows.Forms.Label lblcontact;
         private System.Windows.Forms.TextBox txtboxcontact;
         private System.Windows.Forms.Label lbladdress;
-        private System.Windows.Forms.TextBox txtadress;
+        private System.Windows.Forms.TextBox txtboxadress;
         private System.Windows.Forms.Label lblprofilepic;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox tbsearch;

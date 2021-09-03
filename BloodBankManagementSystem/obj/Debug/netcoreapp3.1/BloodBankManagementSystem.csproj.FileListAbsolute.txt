@@ -17,3 +17,10 @@ C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\De
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.frmHome.resources
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.Properties.Resources.resources
 C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.UI.frmUser.resources
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Negi\Desktop\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\netcoreapp3.1\BloodBankManagementSystem.csproj.CopyComplete

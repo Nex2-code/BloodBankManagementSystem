@@ -16,14 +16,14 @@ namespace BloodBankManagementSystem.DAL
         #region select data frm data base
         public DataTable Select()
         {
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(myconn);
             DataTable dt = new DataTable();
 
             try
             {
                 string sql = "SELECT * FROM tbl_users";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataAdapter adapter = new SqlDataAdapter();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
                 adapter.Fill(dt);
             }
@@ -43,12 +43,12 @@ namespace BloodBankManagementSystem.DAL
         public bool Insert(userBLL u)
         {
             bool isSuccess = false;
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(myconn);
             try
             {
-                string sql = "INSERT INTO tbl_users(usename,email,password,full_name,contact,address,added_date,image_name) values (@usename,@email,@password,@full_name,@contact,@address,@added_date,@image_name)";
+                string sql = "INSERT INTO tbl_users(username,email,password,full_name,contact,address,added_date,image_name) values (@username,@email,@password,@full_name,@contact,@address,@added_date,@image_name)";
                 SqlCommand cmd = new SqlCommand(sql,conn);
-                cmd.Parameters.AddWithValue("@usename", u.username);
+                cmd.Parameters.AddWithValue("@username", u.username);
                 cmd.Parameters.AddWithValue("@email", u.email);
                 cmd.Parameters.AddWithValue("@password", u.password);
                 cmd.Parameters.AddWithValue("@full_name", u.full_name);
@@ -85,12 +85,12 @@ namespace BloodBankManagementSystem.DAL
         public bool Update(userBLL u)
         {
             bool isSuccess = false;
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(myconn);
             try
             {
-                string sql = "UPDATE tbl_users SET usename=@username,email=@email,password=@password,full_name=@full_name,contact=@contact,address=@address,added_date=@added_date,image_name=@image_name WHERE user_id=@user_id";
+                string sql = "UPDATE tbl_users SET username=@username,email=@email,password=@password,full_name=@full_name,contact=@contact,address=@address,added_date=@added_date,image_name=@image_name WHERE user_id=@user_id";
                 SqlCommand cmd = new SqlCommand(sql,conn);
-                cmd.Parameters.AddWithValue("username", u.username);
+                cmd.Parameters.AddWithValue("@username", u.username);
                 cmd.Parameters.AddWithValue("@email", u.email);
                 cmd.Parameters.AddWithValue("@password", u.password);
                 cmd.Parameters.AddWithValue("@full_name", u.full_name);
@@ -126,12 +126,13 @@ namespace BloodBankManagementSystem.DAL
         public bool Delete(userBLL u)
         {
             bool isSuccess = false;
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(myconn);
             try
             {
                 string sql = "DELETE FROM tbl_users WHERE user_id=@user_id";
                 SqlCommand cmd = new SqlCommand(sql,conn);
                 cmd.Parameters.AddWithValue("user_id", u.user_id);
+                conn.Open();
                 int row = cmd.ExecuteNonQuery();
                 if(row>0)
                 {
